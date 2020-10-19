@@ -1,0 +1,20 @@
+{% load static %}
+<div class="col-sm-4 slogan">
+    <h3>Интернет-магазин аксессуаров и нижнего белья для детей и взрослых</h3>
+</div>
+<div class="col-sm-4 logo">
+    <a href="{{ homepage_url }}">
+        {% block brand_title %}
+            <img src="{% static 'img/logol.png' %}">
+            <img src="{% static 'img/logor.png' %}">
+        {% endblock %}
+    </a>
+</div>
+<div class="col-sm-4 contact">
+    <p class="address">Москва, тц "Аэробус", Варшавское шоссе, д.95к1 </p>
+    <p class="worktime">время работы 10:00-22:00</p>
+    <p class="phone">
+        <a href="tel:+79253583293"><img src="{% static 'img/phone-ico.png' %}">8 925 358-32-93</a>
+        <a href="#" class="btn">обратный звонок</a>
+    </p>
+</div>

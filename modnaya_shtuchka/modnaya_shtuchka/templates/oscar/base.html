@@ -1,0 +1,26 @@
+{% extends 'oscar/base.html' %}
+{% load i18n static compress %}
+{% block title %}
+    {{ shop_name }}
+{% endblock %}
+{% block favicon %}
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" />
+{% endblock %}
+
+{# Additional CSS - specific to certain pages #}
+{% block extrastyles %}
+    {% compress css %}
+        <link href="{% static 'fontawesome/css/all.css' %}" rel="stylesheet">
+        <link type="text/x-scss" href="{% static 'scss/main.scss' %}" rel="stylesheet" media="all">
+    {% endcompress %}
+{% endblock %}
+
+{% block extrahead %}{% endblock %}
+
+{% block tracking %}
+    {# Default to using Google analytics #}
+    {% include "oscar/partials/google_analytics.html" %}
+{% endblock %}
+{% block extrascripts %}
+    <script src="{% static "js/main.js" %}"></script>
+{% endblock %}

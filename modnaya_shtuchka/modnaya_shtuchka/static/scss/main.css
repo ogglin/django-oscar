@@ -1,0 +1,214 @@
+* {
+  outline: none !important;
+}
+
+body {
+  font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+}
+
+.header #top_page {
+  z-index: 19;
+}
+.header #top_page .cart_btn {
+  font-size: 1em;
+}
+.header #top_page .cart_btn i {
+  font-size: 1.6em;
+}
+.header .navbar-static-top {
+  z-index: 0;
+}
+.header .page_inner {
+  background-color: #fff9e1;
+  padding: 0;
+}
+.header .page_inner .slogan {
+  text-transform: uppercase;
+  padding: 15px 15px 0 30px;
+  color: #7d4220;
+}
+.header .page_inner .logo {
+  padding: 15px;
+}
+.header .page_inner .logo a {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .page_inner .logo a img {
+  margin: 0;
+  max-width: 50%;
+}
+.header .page_inner .logo a:hover {
+  text-decoration: none;
+}
+.header .page_inner .contact {
+  padding: 15px;
+}
+.header .social {
+  margin: 0 auto 0 0;
+}
+.header .social span {
+  color: #333333;
+  display: inline-block;
+  line-height: 2em;
+  font-weight: 600;
+}
+.header .social a {
+  display: inline-block;
+  padding: 0 5px;
+}
+.header .contact {
+  text-transform: uppercase;
+}
+.header .contact p {
+  padding: 0 0 5px 0;
+  margin: 0;
+}
+.header .contact .address, .header .contact .worktime {
+  font-size: 0.8em;
+  font-weight: 600;
+}
+.header .contact .phone {
+  font-size: 1.2em;
+}
+.header .contact .phone a {
+  color: #333333;
+}
+.header .contact .phone a:first-child {
+  font-size: 1.2em;
+  display: inline-block;
+  line-height: 1.2em;
+  padding: 0 0 0.6em 0;
+}
+.header .contact .phone a:first-child img {
+  padding: 0 5px 0 0;
+}
+.header .contact .phone a.btn {
+  background-color: #f4be37;
+  padding: 4px 8px;
+  font-weight: 600;
+  font-size: 0.8em;
+  margin: -0.5em 0 0 0;
+}
+.header .contact .phone a.btn:hover {
+  box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.account-collapse {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.account-collapse a {
+  color: #333333;
+  padding: 4px 8px;
+  font-size: 1.6em;
+}
+.account-collapse a:hover {
+  text-decoration: none;
+}
+#btn_search {
+  border-right: 2px solid rgba(244, 190, 55, 0.2);
+}
+
+.basket-mini {
+  position: relative;
+  border-left: 2px solid rgba(244, 190, 55, 0.2);
+}
+.basket-mini a {
+  display: inline-block;
+}
+.basket-mini .down {
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+}
+.basket-mini .down:hover {
+  cursor: pointer;
+}
+
+.nav-search {
+  display: none;
+  padding: 0 15px;
+  position: relative;
+  margin: 0;
+}
+.nav-search .btn-search {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  background: transparent;
+  border: none;
+  font-size: 1.4em;
+  line-height: 1.6em;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  border: none !important;
+  background: none !important;
+}
+
+.top_menu {
+  text-align: center;
+  border-bottom: 2px solid #f8d378;
+}
+.top_menu #browse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.top_menu li {
+  position: relative;
+}
+.top_menu li a {
+  text-transform: uppercase;
+  color: #333333;
+}
+.top_menu li:hover:before {
+  position: absolute;
+  content: "";
+  bottom: -2px;
+  left: calc(50% - 20px);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 15px solid #f8d378;
+}
+.top_menu li:hover:after {
+  position: absolute;
+  content: "";
+  bottom: -2px;
+  left: calc(50% - 15px);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 10px solid #ffffff;
+}
+
+.dropdown-submenu:hover .dropdown-menu {
+  display: block;
+  border: 1.5px solid #f8d378;
+}
+.dropdown-submenu:hover .dropdown-menu li:hover:before {
+  content: none;
+}
+.dropdown-submenu:hover .dropdown-menu li:hover:after {
+  content: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .header .page_inner .logo a {
+    flex-direction: column;
+  }
+  .header .page_inner .logo a img {
+    margin: 0;
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
