@@ -30,7 +30,13 @@ SECRET_KEY = '7ivscx8j+^2*rg8u93wex3xu#fvzc7mq2g$y$8%110+-8t%qz6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = DEBUG_STATE
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '*',
+    '127.0.0.1',
+    'localhost',
+    'modnayashtychka.ru',
+    'mdsh.vp4.ru'
+]
 
 # Application definition
 
