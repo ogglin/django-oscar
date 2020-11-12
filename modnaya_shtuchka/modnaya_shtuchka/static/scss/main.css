@@ -44,7 +44,8 @@ body {
   text-decoration: none;
 }
 .header .page_inner .contact {
-  padding: 15px;
+  padding: 15px 30px;
+  text-align: right;
 }
 .header .social {
   margin: 0 auto 0 0;
@@ -199,6 +200,26 @@ body {
 }
 .dropdown-submenu:hover .dropdown-menu li:hover:after {
   content: none;
+}
+
+.page {
+  min-height: calc(100vh - 520px);
+  display: flex;
+  flex-direction: column;
+}
+.page .page_inner {
+  border-radius: 0;
+  flex: 1;
+}
+.page .side_categories li a {
+  color: #FF9F00;
+}
+.page .side_categories li a:hover {
+  color: #b54121;
+}
+
+.footer .page_inner {
+  background-color: #fff9e1;
 }
 
 @media screen and (max-width: 1023px) {

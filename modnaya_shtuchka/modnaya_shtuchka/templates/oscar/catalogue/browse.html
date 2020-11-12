@@ -36,7 +36,7 @@
                             {% endif %}
                         </a>
 
-                        {% if tree_category.has_children %}<ul>{% else %}</li>{% endif %}
+                        {% if tree_category.has_children %}<ul class="list-unstyled">{% else %}</li>{% endif %}
                         {% for n in tree_category.num_to_close %}
                             </ul></li>
                         {% endfor %}
@@ -103,7 +103,7 @@
             </div>
         </section>
     {% else %}
-        <p class="nonefound">{% trans "No products found." %} {{ products }}</p>
+        <p class="nonefound">{% trans "No products found." %}</p>
     {% endif %}
 
 {% endblock content %}
