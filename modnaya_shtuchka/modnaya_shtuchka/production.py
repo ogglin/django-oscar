@@ -1,6 +1,8 @@
+from django.conf.global_settings import CACHES
+
 from .settings import *
 
 DEBUG = False
 # COMPRESS_OFFLINE = True
 # LIBSASS_OUTPUT_STYLE = 'compressed'
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
