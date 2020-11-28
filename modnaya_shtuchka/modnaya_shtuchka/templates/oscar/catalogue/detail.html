@@ -142,7 +142,7 @@
         {% endif %}
         {% for av in product.attribute_values.all %}
             <tr>
-                <th>{{ av.attribute.name }} {{ av.attribute.code }}</th>
+                <th>{{ av.attribute.name }}</th>
                 <td>{{ av.value_as_html }}</td>
             </tr>
         {% endfor %}
