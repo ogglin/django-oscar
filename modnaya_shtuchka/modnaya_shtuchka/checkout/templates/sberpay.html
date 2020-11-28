@@ -1,0 +1,7 @@
+<html>
+    <body onload="document.sber_pay.submit()">
+        <form action="{{ url }}" name="sber_pay" method="GET">
+            <input type="hidden" name="mdOrder" value="{{ order_id }}" />
+        </form>
+    </body>
+</html>
