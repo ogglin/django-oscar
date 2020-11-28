@@ -41,15 +41,15 @@
 {#                            <b class="caret"></b>#}
 {#                        </a>#}
 {#                    </li>#}
-                    <li class="dropdown-submenu {% if expand_dropdown %}open{% endif %}">
-                        <a href="#" class="dropdown-toggle" {% if not expand_dropdown %} data-toggle="dropdown"{% endif %}>
-                            <i class="fas fa-bars"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a tabindex="-1" href="/catalogue/">Каталог</a></li>
-                            <li><a tabindex="-1" href="/offers/">Sale</a></li>
-                        </ul>
-                    </li>
+{#                    <li class="dropdown-submenu {% if expand_dropdown %}open{% endif %}">#}
+{#                        <a href="#" class="dropdown-toggle" {% if not expand_dropdown %} data-toggle="dropdown"{% endif %}>#}
+{#                            <i class="fas fa-bars"></i>#}
+{#                        </a>#}
+{#                        <ul class="dropdown-menu">#}
+{#                            <li><a tabindex="-1" href="/catalogue/">Каталог</a></li>#}
+{#                            <li><a tabindex="-1" href="/offers/">Sale</a></li>#}
+{#                        </ul>#}
+{#                    </li>#}
                     {% category_tree depth=2 as tree_categories %}
                     <li><a tabindex="-1" href="{% url 'catalogue:index' %}">{% trans "All products" %}</a></li>
                     {% if tree_categories %}
@@ -69,7 +69,7 @@
                     {% endif %}
                     <li class="divider"></li>
                     {% block nav_dropdown_extra_items %}
-                        <li><a href="{% url 'offer:list' %}">{% trans "Offers" %}</a></li>
+                        <li><a href="{% url 'offer:list' %}">{% trans "Sale" %}</a></li>
                     {% endblock %}
                 {% block nav_extra %}
                 {% endblock %}

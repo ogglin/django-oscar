@@ -9,6 +9,12 @@
             <div class="row">
                 {% include "oscar/partials/brand.html" %}
             </div><!-- /row -->
+            {# Top-horizontal bar with account, notifictions, dashboard links #}
+            {% include "oscar/partials/nav_accounts.html" %}
+
+            {% block navigation %}
+                {% include "oscar/partials/nav_primary.html" %}
+            {% endblock %}
         </div>
         {% block checkout_nav %}{% endblock %}
     </header><!-- /header -->

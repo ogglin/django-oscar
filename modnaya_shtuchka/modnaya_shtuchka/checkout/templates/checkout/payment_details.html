@@ -1,0 +1,26 @@
+{% extends 'oscar/checkout/payment_details.html' %}
+{% load i18n %}
+
+{% block payment_details %}
+    {% block payment_details_content %}
+        <div class="well">
+            <div class="sub-header">
+                <h3>{% trans "Bankcard" %}</h3>
+            </div>
+            <form method="post" action="{% url 'checkout:preview' %}" class="form-stacked">
+                {% csrf_token %}
+                <div class="form-control">
+                    <label for="sber_id">
+                        <input type="radio" value="sber" id="sber_id" name="method" checked> Сбербанк
+                    </label>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-large btn-primary">{% trans "Continue" %}</button>
+                </div>
+            </form>
+        </div>
+
+{#        <a id="view_preview" href="{% url 'checkout:preview' %}"#}
+{#           class="btn btn-primary btn-lg">{% trans "Continue" %}</a>#}
+    {% endblock payment_details_content %}
+{% endblock payment_details %}

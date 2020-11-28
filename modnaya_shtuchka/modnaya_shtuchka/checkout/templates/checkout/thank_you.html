@@ -1,0 +1,16 @@
+{% extends 'oscar/checkout/thank_you.html' %}
+{% load currency_filters %}
+{% load i18n %}
+
+{% block checkout-nav %}
+    {% include 'oscar/checkout/nav.html' with step=4 %}
+{% endblock %}
+
+{% block payment_info %}
+    <div class="sub-header">
+        <h2>{% trans "Payment" %}</h2>
+    </div>
+    <div class="well well-success">
+        Спасибо за заказ
+    </div>
+{% endblock %}

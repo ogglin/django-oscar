@@ -93,6 +93,7 @@
                                         <col width="20%">
                                         <thead>
                                             <tr>
+                                                <th>{% trans "Order" %}</th>
                                                 <th>{% trans "Name" %}</th>
                                                 <th>{% trans "Code" %}</th>
                                                 <th>{% trans "Type" %}</th>
@@ -106,6 +107,7 @@
                                                     {% for hidden_field in attribute_form.hidden_fields %}
                                                      {{ hidden_field }}
                                                     {% endfor %}
+                                                    <td>{% include 'oscar/dashboard/partials/form_field.html' with field=attribute_form.ordering nolabel=True %}</td>
                                                     <td>{% include 'oscar/dashboard/partials/form_field.html' with field=attribute_form.name nolabel=True %}</td>
                                                     <td>{% include 'oscar/dashboard/partials/form_field.html' with field=attribute_form.code nolabel=True %}</td>
                                                     <td>

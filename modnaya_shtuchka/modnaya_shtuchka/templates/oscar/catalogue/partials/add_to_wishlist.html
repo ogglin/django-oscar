@@ -8,7 +8,7 @@
         {% if wishlists %}
 
             <div class="btn-group btn-wishlist">
-                <a class="btn btn-lg dropdown-toggle" data-toggle="dropdown" href="#">{% trans "Add to wish list" %} <span class="caret"></span></a>
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">{% trans "Add to wish list" %} <span class="caret"></span></a>
                 <ul class="dropdown-menu pull-right">
                     {% for wishlist in wishlists %}
                         {% if wishlist not in product_wishlists %}
@@ -28,7 +28,9 @@
             {# 1 or no existing wishlists - show a simple button #}
             <form id="add_to_wishlist_form" action="{% url 'customer:wishlists-add-product' product_pk=product.pk %}" method="post" class="btn-wishlist">
                 {% csrf_token %}
-                <button type="submit" class="btn btn-lg" data-loading-text="{% trans 'Adding...' %}">{% trans "Add to wish list" %}</button>
+                <button type="submit" class="btn btn-danger" data-loading-text="{% trans 'Adding...' %}"><i class="far fa-heart"></i>
+{#                    {% trans "Add to wish list" %}#}
+                </button>
             </form>
         {% endif %}
 

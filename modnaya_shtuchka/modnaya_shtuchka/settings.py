@@ -53,10 +53,12 @@ INSTALLED_APPS = [
     # Oscar apps
     'oscar.config.Shop',
     'oscar.apps.analytics.apps.AnalyticsConfig',
-    'oscar.apps.checkout.apps.CheckoutConfig',
+    # 'oscar.apps.checkout.apps.CheckoutConfig',
+    'modnaya_shtuchka.checkout.apps.CheckoutConfig',
     'oscar.apps.address.apps.AddressConfig',
     'oscar.apps.shipping.apps.ShippingConfig',
-    'oscar.apps.catalogue.apps.CatalogueConfig',
+    # 'oscar.apps.catalogue.apps.CatalogueConfig',
+    'modnaya_shtuchka.catalogue.apps.CatalogueConfig',
     'oscar.apps.catalogue.reviews.apps.CatalogueReviewsConfig',
     'oscar.apps.communication.apps.CommunicationConfig',
     'oscar.apps.partner.apps.PartnerConfig',
@@ -69,7 +71,8 @@ INSTALLED_APPS = [
     'oscar.apps.search.apps.SearchConfig',
     'oscar.apps.voucher.apps.VoucherConfig',
     'oscar.apps.wishlists.apps.WishlistsConfig',
-    'oscar.apps.dashboard.apps.DashboardConfig',
+    # 'oscar.apps.dashboard.apps.DashboardConfig',
+    'modnaya_shtuchka.dashboard.apps.DashboardConfig',
     'oscar.apps.dashboard.reports.apps.ReportsDashboardConfig',
     'oscar.apps.dashboard.users.apps.UsersDashboardConfig',
     'oscar.apps.dashboard.orders.apps.OrdersDashboardConfig',
@@ -89,7 +92,7 @@ INSTALLED_APPS = [
     'treebeard',
     'sorl.thumbnail',
     'django_tables2',
-    'compressor'
+    'compressor',
 
 ]
 
@@ -234,3 +237,8 @@ OSCAR_DEFAULT_CURRENCY = 'RUB'
 COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'django_libsass.SassCompiler'),
 )
+
+SBER_USERNAME = 'T772500005861-api'
+SBER_PASSWORD = 'T772500005861'
+SBER_RETURNURL = 'https://modnayashtychka.ru/checkout/payment-details/'
+SBER_FAILURL = 'https://modnayashtychka.ru/checkout/payment-details/error_payment'

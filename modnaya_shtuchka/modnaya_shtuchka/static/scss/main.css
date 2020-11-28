@@ -58,7 +58,11 @@ body {
 }
 .header .social a {
   display: inline-block;
-  padding: 0 5px;
+  padding: 0;
+  width: 25px;
+}
+.header .social a img {
+  max-width: 100%;
 }
 .header .contact {
   text-transform: uppercase;
@@ -120,6 +124,7 @@ body {
 }
 .basket-mini a {
   display: inline-block;
+  font-size: 1em;
 }
 .basket-mini .down {
   padding: 0;
@@ -128,6 +133,10 @@ body {
 }
 .basket-mini .down:hover {
   cursor: pointer;
+}
+.basket-mini .dropdown-menu {
+  width: calc(100vw * 0.4);
+  min-width: 400px;
 }
 
 .nav-search {

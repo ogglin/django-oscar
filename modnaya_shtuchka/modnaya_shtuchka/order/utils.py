@@ -5,7 +5,7 @@ class OrderNumberGenerator(CoreOrderNumberGenerator):
 
     def order_number(self, basket=None):
         num = super().order_number(basket)
-        return "SHOP-%s" % num
+        return "MDSH-%s" % num
 
 
 def cyrillic_slugify(value, allow_unicode):

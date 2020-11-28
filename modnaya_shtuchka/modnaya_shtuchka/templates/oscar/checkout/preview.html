@@ -17,7 +17,7 @@
     <form method="post" action="{% url 'checkout:preview' %}" id="place_order_form">
         {% csrf_token %}
         <input type="hidden" name="action" value="place_order" />
-
+        <input type="hidden" name="method" value="{{ method }}">
         {% comment %}
             When submitting sensitive data on the payment details page (eg a bankcard)
             we don't want to save the data and so we pass the bound form to the preview

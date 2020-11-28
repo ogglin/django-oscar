@@ -41,10 +41,12 @@
 
             {% for form in formset %}
                 {% with line=form.instance product=form.instance.product %}
+                    {{ form.instance }}
                     {% purchase_info_for_line request line as session %}
                     <div class="basket-items">
                         <div class="row">
                             <div class="col-sm-2">
+                            {{ product }}
                                 {{ form.id }}
                                 {% with image=product.primary_image %}
                                     {% oscar_thumbnail image.original "100x100" upscale=False as thumb %}
